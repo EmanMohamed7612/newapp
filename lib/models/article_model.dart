@@ -1,17 +1,42 @@
 import 'package:flutter/foundation.dart';
 
 class ArticleModel {
-  final String ?image;
+  final String? image;
   final String title;
-  final String ?subTitle;
+  final String? subTitle;
+  final String url;
 
-  ArticleModel({required this.image,required this.title,required this.subTitle});
+  ArticleModel({
+    required this.image,
+    required this.title,
+    required this.subTitle,
+    required this.url,
+  });
 
-  factory ArticleModel.fromJson(json){
+  factory ArticleModel.fromJson(json) {
     return ArticleModel(
-          image: json['urlToImage'],
-          title: json['title'],
-          subTitle: json['description'],
-        );
+      image: json['urlToImage'],
+      title: json['title'],
+      subTitle: json['description'],
+      url:json['url']
+    );
   }
 }
+
+// import 'package:flutter/foundation.dart';
+
+// class ArticleModel {
+//   final String ?image;
+//   final String title;
+//   final String ?subTitle;
+
+//   ArticleModel({required this.image,required this.title,required this.subTitle});
+
+//   factory ArticleModel.fromJson(json){
+//     return ArticleModel(
+//           image: json['urlToImage'],
+//           title: json['title'],
+//           subTitle: json['description'],
+//         );
+//   }
+// }
