@@ -23,7 +23,19 @@ class _ArticleWebViewState extends State<ArticleWebView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(centerTitle: true, title: const Text("News Details")),
+      appBar: AppBar(
+        centerTitle: true,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text("News", style: TextStyle(fontSize: 24)),
+            const Text(
+              " Details",
+              style: TextStyle(fontSize: 24, color: Colors.orange),
+            ),
+          ],
+        ),
+      ),
       body: WebViewWidget(controller: _controller),
     );
   }

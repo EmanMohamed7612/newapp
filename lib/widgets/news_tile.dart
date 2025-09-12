@@ -8,14 +8,14 @@ class NewsTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-     onTap: () {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (_) => ArticleWebView(url: articleModel.url),
-      ),
-    );
-  },
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (_) => ArticleWebView(url: articleModel.url),
+          ),
+        );
+      },
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -42,7 +42,7 @@ class NewsTile extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             style: const TextStyle(
               color: Colors.black87,
-              fontSize: 20,
+              fontSize: 24,
               fontWeight: FontWeight.w500,
             ),
           ),
@@ -50,7 +50,7 @@ class NewsTile extends StatelessWidget {
           Text(
             articleModel.subTitle ?? '',
             maxLines: 2,
-            style: TextStyle(color: Colors.grey, fontSize: 14),
+            style: TextStyle(color: Colors.grey, fontSize: 20),
           ),
         ],
       ),

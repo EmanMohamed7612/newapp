@@ -12,9 +12,7 @@ class CategoryCard extends StatelessWidget {
         Navigator.of(context).push(
           MaterialPageRoute(
             builder: (context) {
-              return CategoryView(
-                category:category.categoryName ,
-              );
+              return CategoryView(category: category.categoryName);
             },
           ),
         );
@@ -36,7 +34,7 @@ class CategoryCard extends StatelessWidget {
               category.categoryName,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 18,
+                fontSize: 20,
                 color: Colors.white,
               ),
             ),
